@@ -1,0 +1,257 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+.container{
+	background:#fff;
+		min-width: 400px;
+		margin:178px 0px 10px 10px;
+}
+
+.note-taker {
+  position: fixed;
+  top: 0;
+  left: 0;	
+  width: 95%;
+  margin:0;
+  padding:10px 13px 10px 10px;
+  background:#ededed;
+}
+
+#h1-tag{
+	font-size:20px;
+	color:#5f9341;
+	font-weight:bold;
+}
+
+textarea{
+	width: 95.6%;
+	padding: 9px;
+	border-radius: 0;
+	border: 1px solid #5f9341;
+	height:100px;
+	resize: none;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#input-btn, #delete-btn{
+	border-radius: 0;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	user-select:none;
+	position: relative;
+	display: inline-block;
+}
+
+#input-btn {
+	background: #5f9341;
+	border: 0;
+	margin-top:0px;
+	padding: 10px 15px;
+}
+
+#delete-btn{
+	background: #fff;
+	color: #5f9341;
+	border:3px solid #5f9341;
+	margin-top:3px;
+	padding: 5px 10px;
+}
+
+#input-btn:active, #delete-btn:active {
+  background: #90EE90;
+  opacity: 1;
+  transition: all 1s
+}
+
+ul{
+	list-style: none;
+	padding: 10px 0 0 0;
+}
+
+ul:empty {
+	display:none;
+}
+
+li{
+	margin-bottom:5px;
+	font-size:12px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	max-width:400px;
+}
+
+li a{
+	color: #5f9341;
+}
+
+/* Select every 3rd list item starting with 1st - Dates*/
+#ul-el li:nth-child(3n - 2) { 
+	font-weight: bold;
+	color:#5f9341;
+	margin-left:25px;
+}
+
+/* Select every 3rd list item starting with 2nd - URLs*/
+#ul-el li:nth-child(3n - 1){ 
+	margin-top:-22px !important;
+}
+
+/* Select every 3rd list item starting with 3rd - Notes*/
+#ul-el li:nth-child(3n) { 
+	margin-bottom:15px;
+}
+
+#delete-info {
+	color:red;
+	font-size:80%;
+	background:#fff;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 131px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+	margin-left:18px;
+	margin-top:-5px;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*Scrollbar beautify*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+  width: 10px;
+}
+
+/*Toggle button*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  float:right;
+  margin:7px 10px 0 0;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 0;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5f9341;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #5f9341;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(21px);
+  transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#save-url{
+	float:right;
+	margin:11px 5px 0 0;
+	font-weight:bold;
+	font-size:110%;
+}
+
+#gearIcon, #csv-download {
+	float:right;
+	margin-top:5px;
+	cursor:pointer;
+	padding-left:5px;
+}
+
+#confirm-language-change{
+	color: darkgreen;
+}

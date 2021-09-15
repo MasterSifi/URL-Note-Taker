@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf8">
+		<title>URL Note Taker</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="note-taker">
+				<form onsubmit="return false;"> 
+					<textarea id="input-el"></textarea>
+					<div id="input-btn">SAVE NOTE</div> 
+					<div id="delete-btn" class="tooltip">
+						DELETE ALL
+						<span class="tooltiptext">Click twice!
+						</span>
+					</div>
+					<a title ="Settings & Help" href="settings.html"><img id ="gearIcon" src="gear.png"></a>
+					<img id="csv-download" title="Download Notes in PDF" src="download.png">
+					<label class="switch">
+						  <input id="switch-btn" type="checkbox" checked>
+						  <span class="slider round"></span>
+					</label>
+					<span id="save-url">Save URL: </span>
+				</form>
+			</div>
+		</div>
+		<div id="note-list">
+			<ul id="ul-el"></ul>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
